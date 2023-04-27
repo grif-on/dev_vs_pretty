@@ -146,6 +146,7 @@ const devToPretty = tiled.registerAction("devToPretty", function () {
 });
 
 devToPretty.text = sharedNameDtoP;
+devToPretty.icon = "conv.png"
 
 tiled.extendMenu("Map", [
     { separator: true },
@@ -273,6 +274,7 @@ const prettyToDev = tiled.registerAction("prettyToDev", function () {
 });
 
 prettyToDev.text = sharedNamePtoD;
+prettyToDev.icon = "conv.png"
 
 tiled.extendMenu("Map", [
     { action: "prettyToDev", before: "MapProperties" },
