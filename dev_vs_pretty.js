@@ -27,10 +27,10 @@ SOFTWARE.
 
 let map
 
-let sharedNameDtoP = "Convert types from DEV to PRETTY";
+let sharedNameDevToPretty = "Convert types from DEV to PRETTY";
 const devToPretty = tiled.registerAction("devToPretty", function () {
     map = tiled.activeAsset;
-    map.macro(sharedNameDtoP, function () {
+    map.macro(sharedNameDevToPretty, function () {
         for (let l = 0; l < map.layerCount; l++) {
             currentLayer = map.layerAt(l);
             if (currentLayer.objects != null) {                    //на случай , если слой не будет иметь объектов вообще
@@ -155,7 +155,7 @@ const devToPretty = tiled.registerAction("devToPretty", function () {
     });
 });
 
-devToPretty.text = sharedNameDtoP;
+devToPretty.text = sharedNameDevToPretty;
 devToPretty.icon = "conv.png"
 
 tiled.extendMenu("Map", [
@@ -165,10 +165,10 @@ tiled.extendMenu("Map", [
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-let sharedNamePtoD = "Convert types from PRETTY to DEV";
+let sharedNamePrettyToDev = "Convert types from PRETTY to DEV";
 const prettyToDev = tiled.registerAction("prettyToDev", function () {
     map = tiled.activeAsset;
-    map.macro(sharedNamePtoD, function () {
+    map.macro(sharedNamePrettyToDev, function () {
         for (let l = 0; l < map.layerCount; l++) {
             currentLayer = map.layerAt(l);
             if (currentLayer.objects != null) {                    //на случай , если слой не будет иметь объектов вообще
@@ -293,7 +293,7 @@ const prettyToDev = tiled.registerAction("prettyToDev", function () {
     });
 });
 
-prettyToDev.text = sharedNamePtoD;
+prettyToDev.text = sharedNamePrettyToDev;
 prettyToDev.icon = "conv.png"
 
 tiled.extendMenu("Map", [
